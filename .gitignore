@@ -1,0 +1,5 @@
+old/
+compiler/
+build/
+test.c
+a.out
