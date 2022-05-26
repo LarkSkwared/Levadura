@@ -83,6 +83,12 @@ void printVeci(int *c, uint8_t size)
             printf("%d, ", c[n]);
 
         else
-            printf("%d]\n", c[n]);
+            printf("%d]", c[n]);
     }
+}
+
+void printlnVeci(int *c, uint8_t size)
+{
+    printVeci(c, size);
+    printf("\n");
 }

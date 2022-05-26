@@ -12,5 +12,6 @@ double normdVec2i(Vec2i vec);
 Vec2f unitfVec2i(Vec2i vec);
 Vec2d unitdVec2i(Vec2i vec);
 void printVec2i(Vec2i vec);
+void printlnVec2i(Vec2i vec);
 
 #endif // _MATH_VECTOR2_INT_H__

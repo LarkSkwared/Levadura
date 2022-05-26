@@ -1,67 +1,67 @@
 #include"vector_float.h"
 #include"vector_types.h"
 
-#define SIZE 2
+#define SIZE 3
 
-Vec2f addVec2f(Vec2f a, Vec2f b)
+Vec3f addVec3f(Vec3f a, Vec3f b)
 {
-    Vec2f out;
+    Vec3f out;
     addVecf(a.c, b.c, out.c, SIZE);
     return out;
 }
 
-Vec2f subVec2f(Vec2f a, Vec2f b)
+Vec3f subVec3f(Vec3f a, Vec3f b)
 {
-    Vec2f out;
+    Vec3f out;
     subVecf(a.c, b.c, out.c, SIZE);
     return out;
 }
 
-Vec2f scaleVec2f(Vec2f *vec, float scale)
+Vec3f scaleVec3f(Vec3f *vec, float scale)
 {
-    Vec2f out;
+    Vec3f out;
     scaleVecf(vec->c, scale, out.c, SIZE);
     return out;
 }
 
-float dotVec2f(Vec2f a, Vec2f b)
+float dotVec3f(Vec3f a, Vec3f b)
 {
     float out = dotVecf(a.c, b.c, SIZE);
     return out;
 }
 
-float normfVec2f(Vec2f vec)
+float normfVec3f(Vec3f vec)
 {
     float out = normfVecf(vec.c, SIZE);
     return out;
 }
 
-double normdVec2f(Vec2f vec)
+double normdVec3f(Vec3f vec)
 {
     double out = normdVecf(vec.c, SIZE);
     return out;
 }
 
-Vec2f unitfVec2f(Vec2f vec)
+Vec3f unitfVec3f(Vec3f vec)
 {
-    Vec2f out;
+    Vec3f out;
     unitfVecf(vec.c, out.c, SIZE);
     return out;
 }
 
-Vec2d unitdVec2f(Vec2f vec)
+Vec3d unitdVec3f(Vec3f vec)
 {
-    Vec2d out;
+    Vec3d out;
     unitdVecf(vec.c, out.c, SIZE);
     return out;
 }
 
-void printVec2f(Vec2f vec)
+void printVec3f(Vec3f vec)
 {
     printVecf(vec.c, SIZE);
 }
 
-void printlnVec2f(Vec2f vec)
+void printlnVec3f(Vec3f vec)
 {
     printlnVecf(vec.c, SIZE);
 }

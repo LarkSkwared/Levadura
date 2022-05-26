@@ -12,5 +12,6 @@ double normdVeci(int *c, uint8_t size);
 void unitfVeci(int *c, float *out, uint8_t size);
 void unitdVeci(int *c, double *out, uint8_t size);
 void printVeci(int *c, uint8_t size);
+void printlnVeci(int *c, uint8_t size);
 
 #endif // _MATH_VECTOR_INT_H__

@@ -12,5 +12,6 @@ double normdVec2d(Vec2d vec);
 Vec2f unitfVec2d(Vec2d vec);
 Vec2d unitdVec2d(Vec2d vec);
 void printVec2d(Vec2d vec);
+void printlnVec2d(Vec2d vec);
 
 #endif // _MATH_VECTOR2_DOUBLE_H__

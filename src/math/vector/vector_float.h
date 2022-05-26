@@ -12,5 +12,6 @@ double normdVecf(float *c, uint8_t size);
 void unitfVecf(float *c, float *out, uint8_t size);
 void unitdVecf(float *c, double *out, uint8_t size);
 void printVecf(float *c, uint8_t size);
+void printlnVecf(float *c, uint8_t size);
 
 #endif // _MATH_VECTOR_FLOAT_H__

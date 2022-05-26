@@ -12,5 +12,6 @@ double normdVec2f(Vec2f vec);
 Vec2f unitfVec2f(Vec2f vec);
 Vec2d unitdVec2f(Vec2f vec);
 void printVec2f(Vec2f vec);
+void printlnVec2f(Vec2f vec);
 
 #endif // _MATH_VECTOR2_FLOAT_H__

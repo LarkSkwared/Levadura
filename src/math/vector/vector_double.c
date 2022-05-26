@@ -83,6 +83,12 @@ void printVecd(double *c, uint8_t size)
             printf("%lf, ", c[n]);
 
         else
-            printf("%lf]\n", c[n]);
+            printf("%lf]", c[n]);
     }
+}
+
+void printlnVecd(double *c, uint8_t size)
+{
+    printVecd(c, size);
+    printf("\n");
 }

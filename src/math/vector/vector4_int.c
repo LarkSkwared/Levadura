@@ -1,67 +1,67 @@
 #include"vector_int.h"
 #include"vector_types.h"
 
-#define SIZE 2
+#define SIZE 4
 
-Vec2i addVec2i(Vec2i a, Vec2i b)
+Vec4i addVec4i(Vec4i a, Vec4i b)
 {
-    Vec2i out;
+    Vec4i out;
     addVeci(a.c, b.c, out.c, SIZE);
     return out;
 }
 
-Vec2i subVec2i(Vec2i a, Vec2i b)
+Vec4i subVec4i(Vec4i a, Vec4i b)
 {
-    Vec2i out;
+    Vec4i out;
     subVeci(a.c, b.c, out.c, SIZE);
     return out;
 }
 
-Vec2i scaleVec2i(Vec2i *vec, int scale)
+Vec4i scaleVec4i(Vec4i *vec, int scale)
 {
-    Vec2i out;
+    Vec4i out;
     scaleVeci(vec->c, scale, out.c, SIZE);
     return out;
 }
 
-int dotVec2i(Vec2i a, Vec2i b)
+int dotVec4i(Vec4i a, Vec4i b)
 {
     int out = dotVeci(a.c, b.c, SIZE);
     return out;
 }
 
-float normfVec2i(Vec2i vec)
+float normfVec4i(Vec4i vec)
 {
     float out = normfVeci(vec.c, SIZE);
     return out;
 }
 
-double normdVec2i(Vec2i vec)
+double normdVec4i(Vec4i vec)
 {
     double out = normdVeci(vec.c, SIZE);
     return out;
 }
 
-Vec2f unitfVec2i(Vec2i vec)
+Vec4f unitfVec4i(Vec4i vec)
 {
-    Vec2f out;
+    Vec4f out;
     unitfVeci(vec.c, out.c, SIZE);
     return out;
 }
 
-Vec2d unitdVec2i(Vec2i vec)
+Vec4d unitdVec4i(Vec4i vec)
 {
-    Vec2d out;
+    Vec4d out;
     unitdVeci(vec.c, out.c, SIZE);
     return out;
 }
 
-void printVec2i(Vec2i vec)
+void printVec4i(Vec4i vec)
 {
     printVeci(vec.c, SIZE);
 }
 
-void printlnVec2i(Vec2i vec)
+void printlnVec4i(Vec4i vec)
 {
     printlnVeci(vec.c, SIZE);
 }

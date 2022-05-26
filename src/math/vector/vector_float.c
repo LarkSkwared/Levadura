@@ -83,6 +83,12 @@ void printVecf(float *c, uint8_t size)
             printf("%f, ", c[n]);
 
         else
-            printf("%f]\n", c[n]);
+            printf("%f]", c[n]);
     }
+}
+
+void printlnVecf(float *c, uint8_t size)
+{
+    printVecf(c, size);
+    printf("\n");
 }
