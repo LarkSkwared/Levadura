@@ -1,67 +1,116 @@
-#include"vector_float.h"
+#include<stdio.h>
+#include<math.h>
 #include"vector_types.h"
 
-#define SIZE 3
+void setVec3f(Vec3f *vec, float x, float y, float z)
+{
+    vec->x = x;
+    vec->y = y;
+    vec->z = z;
+}
+
+void Vec3fInit(Vec3f *vec)
+{
+    setVec3f(vec, 0.0f, 0.0f, 0.0f);
+}
 
 Vec3f addVec3f(Vec3f a, Vec3f b)
 {
     Vec3f out;
-    addVecf(a.c, b.c, out.c, SIZE);
+
+    out.x = a.x + b.x;
+    out.y = a.y + b.y;
+    out.z = a.z + b.z;
+
     return out;
 }
 
 Vec3f subVec3f(Vec3f a, Vec3f b)
 {
     Vec3f out;
-    subVecf(a.c, b.c, out.c, SIZE);
+
+    out.x = a.x - b.x;
+    out.y = a.y - b.y;
+    out.z = a.z - b.z;
+
     return out;
 }
 
-Vec3f scaleVec3f(Vec3f *vec, float scale)
+Vec3f scaleVec3f(Vec3f *vec, float scalar)
 {
     Vec3f out;
-    scaleVecf(vec->c, scale, out.c, SIZE);
+
+    vec->x *= scalar;
+    vec->y *= scalar;
+    vec->z *= scalar;
+    out = *vec;
+
     return out;
 }
 
 float dotVec3f(Vec3f a, Vec3f b)
 {
-    float out = dotVecf(a.c, b.c, SIZE);
+    float out = (a.x * b.x);
+
+    out += (a.y * b.y);
+    out += (a.z * b.z);
+
     return out;
 }
 
 float normfVec3f(Vec3f vec)
 {
-    float out = normfVecf(vec.c, SIZE);
+    float out = (vec.x * vec.x);
+
+    out += (vec.y * vec.y);
+    out += (vec.z * vec.z);
+    out = sqrtf(out);
+
     return out;
 }
 
 double normdVec3f(Vec3f vec)
 {
-    double out = normdVecf(vec.c, SIZE);
+    double out = (vec.x * vec.x);
+
+    out += (vec.y * vec.y);
+    out += (vec.z * vec.z);
+    out = sqrt(out);
+
     return out;
 }
 
 Vec3f unitfVec3f(Vec3f vec)
 {
     Vec3f out;
-    unitfVecf(vec.c, out.c, SIZE);
+    float norm = normfVec3f(vec);
+
+    out.x = vec.x / norm;
+    out.y = vec.y / norm;
+    out.z = vec.z / norm;
+
     return out;
 }
 
 Vec3d unitdVec3f(Vec3f vec)
 {
     Vec3d out;
-    unitdVecf(vec.c, out.c, SIZE);
+    double norm = normdVec3f(vec);
+
+    out.x = vec.x / norm;
+    out.y = vec.y / norm;
+    out.z = vec.z / norm;
+
     return out;
 }
 
 void printVec3f(Vec3f vec)
 {
-    printVecf(vec.c, SIZE);
+    printf("[%f, %f, %f]", vec.x, vec.y, vec.z);
 }
 
 void printlnVec3f(Vec3f vec)
 {
-    printlnVecf(vec.c, SIZE);
+    printVec3f(vec);
+    printf("\n");
 }

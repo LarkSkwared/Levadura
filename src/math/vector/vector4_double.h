@@ -3,9 +3,11 @@
 
 #include"vector_types.h"
 
+void setVec4d(Vec4d *vec, double x, double y, double z, double w);
+void Vec4dInit(Vec4d *vec);
 Vec4d addVec4d(Vec4d a, Vec4d b);
 Vec4d subVec4d(Vec4d a, Vec4d b);
-Vec4d scaleVec4d(Vec4d *vec, double scale);
+Vec4d scaleVec4d(Vec4d *vec, double scalar);
 double dotVec4d(Vec4d a, Vec4d b);
 float normfVec4d(Vec4d vec);
 double normdVec4d(Vec4d vec);

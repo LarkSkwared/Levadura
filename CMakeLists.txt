@@ -2,9 +2,6 @@ cmake_minimum_required(VERSION 3.10)
 
 project(Levadura)
 add_library(Levadura
-        src/math/vector/vector_int.c
-        src/math/vector/vector_float.c
-        src/math/vector/vector_double.c
         src/math/vector/vector2_int.c
         src/math/vector/vector2_float.c
         src/math/vector/vector2_double.c

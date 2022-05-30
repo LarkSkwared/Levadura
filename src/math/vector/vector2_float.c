@@ -1,67 +1,105 @@
-#include"vector_float.h"
+#include<stdio.h>
+#include<math.h>
 #include"vector_types.h"
 
-#define SIZE 2
+void setVec2f(Vec2f *vec, float x, float y)
+{
+    vec->x = x;
+    vec->y = y;
+}
+
+void Vec2fInit(Vec2f *vec)
+{
+    setVec2f(vec, 0.0f, 0.0f);
+}
 
 Vec2f addVec2f(Vec2f a, Vec2f b)
 {
     Vec2f out;
-    addVecf(a.c, b.c, out.c, SIZE);
+
+    out.x = a.x + b.x;
+    out.y = b.y + b.y;
+
     return out;
 }
 
 Vec2f subVec2f(Vec2f a, Vec2f b)
 {
     Vec2f out;
-    subVecf(a.c, b.c, out.c, SIZE);
+
+    out.x = a.x - b.x;
+    out.y = a.y - b.y;
+
     return out;
 }
 
-Vec2f scaleVec2f(Vec2f *vec, float scale)
+Vec2f scaleVec2f(Vec2f *vec, float scalar)
 {
     Vec2f out;
-    scaleVecf(vec->c, scale, out.c, SIZE);
+
+    vec->x *= scalar;
+    vec->y *= scalar;
+    out = *vec;
+
     return out;
 }
 
 float dotVec2f(Vec2f a, Vec2f b)
 {
-    float out = dotVecf(a.c, b.c, SIZE);
+    float out = (a.x * b.x);
+    out += (a.y * b.y);
     return out;
 }
 
 float normfVec2f(Vec2f vec)
 {
-    float out = normfVecf(vec.c, SIZE);
+    float out = (vec.x * vec.x);
+
+    out += (vec.y * vec.y);
+    out = sqrtf(out);
+
     return out;
 }
 
 double normdVec2f(Vec2f vec)
 {
-    double out = normdVecf(vec.c, SIZE);
+    double out = (vec.x * vec.x);
+
+    out += (vec.y * vec.y);
+    out = sqrt(out);
+
     return out;
 }
 
 Vec2f unitfVec2f(Vec2f vec)
 {
     Vec2f out;
-    unitfVecf(vec.c, out.c, SIZE);
+    float norm = normfVec2f(vec);
+
+    out.x = vec.x / norm;
+    out.y = vec.y / norm;
+
     return out;
 }
 
 Vec2d unitdVec2f(Vec2f vec)
 {
     Vec2d out;
-    unitdVecf(vec.c, out.c, SIZE);
+    double norm = normdVec2f(vec);
+
+    out.x = vec.x / norm;
+    out.y = vec.y / norm;
+
     return out;
 }
 
 void printVec2f(Vec2f vec)
 {
-    printVecf(vec.c, SIZE);
+    printf("[%f, %f]", vec.x, vec.y);
 }
 
 void printlnVec2f(Vec2f vec)
 {
-    printlnVecf(vec.c, SIZE);
+    printVec2f(vec);
+    printf("\n");
 }

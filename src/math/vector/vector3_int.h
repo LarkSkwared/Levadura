@@ -3,9 +3,11 @@
 
 #include"vector_types.h"
 
+void setVec3i(Vec3i *vec, int x, int y, int z);
+void Vec3iInit(Vec3i *vec);
 Vec3i addVec3i(Vec3i a, Vec3i b);
 Vec3i subVec3i(Vec3i a, Vec3i b);
-Vec3i scaleVec3i(Vec3i *vec, int scale);
+Vec3i scaleVec3i(Vec3i *vec, int scalar);
 int dotVec3i(Vec3i a, Vec3i b);
 float normfVec3i(Vec3i vec);
 double normdVec3i(Vec3i vec);
