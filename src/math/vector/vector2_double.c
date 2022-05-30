@@ -46,21 +46,28 @@ Vec2d scaleVec2d(Vec2d *vec, double scalar)
 
 double dotVec2d(Vec2d a, Vec2d b)
 {
-    double out = (a.x * b.x) + (a.y * b.y);
+    double out = a.x * b.x;
+    out += a.y * b.y;
     return out;
 }
 
 float normfVec2d(Vec2d vec)
 {
-    float out = (vec.x * vec.x) + (vec.y * vec.y);
+    float out = vec.x * vec.x;
+
+    out += vec.y * vec.y;
     out = sqrtf(out);
+
     return out;
 }
 
 double normdVec2d(Vec2d vec)
 {
-    double out = (vec.x * vec.x) + (vec.y * vec.y);
+    double out = vec.x * vec.x;
+
+    out += vec.y * vec.y;
     out = sqrt(out);
+
     return out;
 }
 

@@ -46,16 +46,16 @@ Vec2i scaleVec2i(Vec2i *vec, int scalar)
 
 int dotVec2i(Vec2i a, Vec2i b)
 {
-    int out = (a.x * b.x);
-    out += (a.y * b.y);
+    int out = a.x * b.x;
+    out += a.y * b.y;
     return out;
 }
 
 float normfVec2i(Vec2i vec)
 {
-    float out = (vec.x * vec.x);
+    float out = vec.x * vec.x;
 
-    out += (vec.y * vec.y);
+    out += vec.y * vec.y;
     out = sqrtf(out);
 
     return out;
@@ -63,9 +63,9 @@ float normfVec2i(Vec2i vec)
 
 double normdVec2i(Vec2i vec)
 {
-    double out = (vec.x * vec.x);
+    double out = vec.x * vec.x;
 
-    out += (vec.y * vec.y);
+    out += vec.y * vec.y;
     out = sqrt(out);
 
     return out;

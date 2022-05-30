@@ -50,20 +50,20 @@ Vec3d scaleVec3d(Vec3d *vec, double scalar)
 
 double dotVec3d(Vec3d a, Vec3d b)
 {
-    double out = (a.x * b.x);
+    double out = a.x * b.x;
 
-    out += (a.y * b.y);
-    out += (a.z * b.z);
+    out += a.y * b.y;
+    out += a.z * b.z;
 
     return out;
 }
 
 float normfVec3d(Vec3d vec)
 {
-    float out = (vec.x * vec.x);
+    float out = vec.x * vec.x;
 
-    out += (vec.y * vec.y);
-    out += (vec.z * vec.z);
+    out += vec.y * vec.y;
+    out += vec.z * vec.z;
     out = sqrtf(out);
 
     return out;
@@ -71,10 +71,10 @@ float normfVec3d(Vec3d vec)
 
 double normdVec3d(Vec3d vec)
 {
-    double out = (vec.x * vec.x);
+    double out = vec.x * vec.x;
 
-    out += (vec.y * vec.y);
-    out += (vec.z * vec.z);
+    out += vec.y * vec.y;
+    out += vec.z * vec.z;
     out = sqrt(out);
 
     return out;

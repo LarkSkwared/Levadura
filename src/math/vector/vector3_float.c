@@ -50,20 +50,20 @@ Vec3f scaleVec3f(Vec3f *vec, float scalar)
 
 float dotVec3f(Vec3f a, Vec3f b)
 {
-    float out = (a.x * b.x);
+    float out = a.x * b.x;
 
-    out += (a.y * b.y);
-    out += (a.z * b.z);
+    out += a.y * b.y;
+    out += a.z * b.z;
 
     return out;
 }
 
 float normfVec3f(Vec3f vec)
 {
-    float out = (vec.x * vec.x);
+    float out = vec.x * vec.x;
 
-    out += (vec.y * vec.y);
-    out += (vec.z * vec.z);
+    out += vec.y * vec.y;
+    out += vec.z * vec.z;
     out = sqrtf(out);
 
     return out;
@@ -71,10 +71,10 @@ float normfVec3f(Vec3f vec)
 
 double normdVec3f(Vec3f vec)
 {
-    double out = (vec.x * vec.x);
+    double out = vec.x * vec.x;
 
-    out += (vec.y * vec.y);
-    out += (vec.z * vec.z);
+    out += vec.y * vec.y;
+    out += vec.z * vec.z;
     out = sqrt(out);
 
     return out;

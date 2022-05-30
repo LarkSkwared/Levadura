@@ -50,20 +50,20 @@ Vec3i scaleVec3i(Vec3i *vec, int scalar)
 
 int dotVec3i(Vec3i a, Vec3i b)
 {
-    int out = (a.x * b.x);
+    int out = a.x * b.x;
 
-    out += (a.y * b.y);
-    out += (a.z * b.z);
+    out += a.y * b.y;
+    out += a.z * b.z;
 
     return out;
 }
 
 float normfVec3i(Vec3i vec)
 {
-    float out = (vec.x * vec.x);
+    float out = vec.x * vec.x;
 
-    out += (vec.y * vec.y);
-    out += (vec.z * vec.z);
+    out += vec.y * vec.y;
+    out += vec.z * vec.z;
     out = sqrtf(out);
 
     return out;
@@ -71,10 +71,10 @@ float normfVec3i(Vec3i vec)
 
 double normdVec3i(Vec3i vec)
 {
-    double out = (vec.x * vec.x);
+    double out = vec.x * vec.x;
 
-    out += (vec.y * vec.y);
-    out += (vec.z * vec.z);
+    out += vec.y * vec.y;
+    out += vec.z * vec.z;
     out = sqrt(out);
 
     return out;
